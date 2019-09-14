@@ -1,7 +1,7 @@
 let singleton = null;
 let actors = {};
-// let baseURL = "http://localhost:8080";
-let baseURL = "https://netflix-recommendation-server.herokuapp.com";
+let baseURL = "http://localhost:8080";
+// let baseURL = "https://netflix-recommendation-server2.herokuapp.com";
 
 export default class ActorService {
 
@@ -38,7 +38,7 @@ export default class ActorService {
 
     //Delete an actor from the followed actor's list
     unfollowActor = (actorId, username) =>
-        fetch(baseURL+ "/api/unfollow/fan/"+username+"/actor/"+actorId, {
+        fetch(baseURL + "/api/unfollow/fan/" + username + "/actor/" + actorId, {
             method: 'post',
             headers: {
                 'content-type': 'application/json'
@@ -47,6 +47,6 @@ export default class ActorService {
 
     //Check if fan follows an actor
     checkIfFanFollowsActor = (username, actorId) =>
-        fetch(baseURL + "/api/check/follow/fan/"+username+"/actor/"+actorId)
+        fetch(baseURL + "/api/check/follow/fan/" + username + "/actor/" + actorId)
             .then(response => response.json())
 }
