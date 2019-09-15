@@ -8,8 +8,8 @@ const movieService = new MovieService();
 const userService = new UserService();
 const actorService = new ActorService();
 
-let baseURL = "http://localhost:8080";
-// let baseURL = "https://netflix-recommendation-server2.herokuapp.com";
+// let baseURL = "http://localhost:8080";
+let baseURL = "https://netflix-recommendation-server.herokuapp.com";
 
 /**
  * LOGIN METHOD
